@@ -1,0 +1,8 @@
+appversion: v1
+kind: configmap
+metadata:
+  name: configmap
+data:
+  movie: "spiderman"
+  duration: "3hrs"
+  linkdein: "https://www.linkedin.com/in/nallam-srikanth-213573403/"

@@ -1,0 +1,13 @@
+kind: pod
+appversion: v1
+metadata:
+  name: annotations
+  label:
+    course: k8
+    trainer: srikanth
+  annotations:
+    imageregistry: "https://hub.docker.com/"
+spec:
+  containers:
+    name: nginx
+    image: nginx

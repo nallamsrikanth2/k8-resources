@@ -1,0 +1,14 @@
+kind: service
+appversion: v1
+metadata:
+  name: nginx-cluster
+spec:
+  selector:
+    name: frontend
+    project: expense
+    component: frontend
+    environment: dev
+  ports:
+  - protocol: TCP
+    port: 80 # serviceort
+    targetPort: 80 # targetport

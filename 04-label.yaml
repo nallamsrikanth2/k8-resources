@@ -1,0 +1,11 @@
+kind: pod
+appversion: v1
+metadata:
+  name: label
+  labels:
+  - course: k8
+    trainer: srikanth
+spec:
+  containers:
+    name: nginx
+    image: nginx

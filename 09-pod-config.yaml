@@ -1,0 +1,22 @@
+kind: pod
+appversion: v1
+metadata:
+  name: pod-config
+spec:
+  containers:
+  - name: nginx
+    image: nginx
+    envfrom:
+    - configMapRef:
+      name: configmap
+    # env:
+    # - name: movie
+    #   valuefrom:
+    #     configMapKeyRef:
+    #       name: configmap
+    #       key: movie
+    # - name: linkdein
+    #   valuefrom:
+    #     configMapKeyRef:
+    #       name: configmap
+    #       key: linkdein

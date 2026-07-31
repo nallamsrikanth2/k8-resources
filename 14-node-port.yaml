@@ -1,0 +1,17 @@
+kind: node-port
+appversion: v1
+metadata: 
+  name: nginx-np
+spec:
+  type: nodeport
+  selector:
+    name: frontend
+    project: expense
+    component: frontend
+    environment: dev
+  ports:
+  - protocol: TCP
+    port: 80 # serviceort
+    targetPort: 80 # targetport
+    nodeport: 30000
+
