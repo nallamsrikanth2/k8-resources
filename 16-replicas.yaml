@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Replicaset
+metadata:
+  name: nginx
+  labels:
+  # this labels belongs to replicaset resources
+    app: nginx
+    tier: frontend
+spec:
+# modify replicas according to your case
+  replicas: 3
+  selectors: 
+    matchlabels:
+      app: nginx
+      tier: frontend
+  template:
+    metadata:
+      matchlabels:
+        app: nginx
+        tier: frontend
+        project: some-project
+    spec:
+      containers:
+        name: nginx
+        image: nginx
+
+
+  
+
