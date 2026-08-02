@@ -21,7 +21,7 @@ spec:
         project: some-project
     spec:
       containers:
-        name: nginx
+      - name: nginx
         image: nginx
 
 
