@@ -42,7 +42,7 @@ spec:
       name: nginx
       project: some-project
     ports:
-      protocol: TCP
+    - protocol: TCP
       port: 80
       targetPort: 80
     
