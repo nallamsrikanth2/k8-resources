@@ -39,10 +39,10 @@ spec:
   - name: nginx
     image: nginx
     volumeMounts:
-  nodeselector:
-    topology.kubernetes.io/zone: us-east-1f
     - name: persistent-storage
       mountPath: /usr/share/nginx/html
+  nodeselector:
+    topology.kubernetes.io/zone: us-east-1f
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
