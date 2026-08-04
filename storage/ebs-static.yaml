@@ -53,12 +53,11 @@ metadata:
 spec:
   type: LoadBalancer
   selector:
-    matchLabels:
-      name: nginx
-      project: some-project
-      component: nginx
+    name: nginx
+    project: some-project
+    component: nginx
   ports:
-    protocol: TCP
+  - protocol: TCP
     port: 80
     targetPort: 80
 
