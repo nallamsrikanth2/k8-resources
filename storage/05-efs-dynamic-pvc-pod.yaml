@@ -13,7 +13,7 @@ spec:
 kind: Pod
 apiVersion: v1
 metadata:
-  name: nginx
+  name: nginx-dynamic
   labels:
     name: nginx
     tier: web
