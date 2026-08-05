@@ -13,11 +13,11 @@ spec:
   csi:
     driver: efs.csi.aws.com
     volumeHandle: "fs-0de1d56e121094cbe"
-  ---
+---
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: efs-claim
+  name: efs-static-claim
 spec:
   accessModes:
     - ReadWriteOnce
