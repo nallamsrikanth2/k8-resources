@@ -16,7 +16,7 @@ metadata:
   name: nginx
   labels:
     name: nginx
-    tier: nginx
+    tier: web
 spec:
   containers:
   - name: nginx
@@ -37,8 +37,8 @@ metadata:
 spec:
   selector:
     name: nginx
-    tier: nginx
+    tier: web
   ports:
   - protocol: TCP
     port: 80
-    protocol: 80
+    targetPort: 80
