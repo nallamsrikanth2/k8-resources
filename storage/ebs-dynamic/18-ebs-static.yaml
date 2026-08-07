@@ -61,7 +61,7 @@ kind: Service
 metadata:
   name: nginx
 spec:
-  type: Nodeport
+  type: NodePort
   selector:
     name: nginx
     project: some-project
