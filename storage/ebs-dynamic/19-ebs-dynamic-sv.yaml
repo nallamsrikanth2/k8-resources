@@ -5,30 +5,3 @@ metadata:
 reclaimPolicy: Retain
 provisioner: ebs.csi.aws.com
 volumeBindingMode: WaitForFirstConsumer
----
-apiVersion: v1
-kind: Pod
-metadata:
-  labels:
-    name: nginx
-    tier: web
-spec:
-  containers:
-  - name: nginx
-    image: nginx
-
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: nginx
-spec:
-  type: NodePort
-  selector:
-    name: nginx
-    tier: web
-  ports:
-  - protocol: TCP
-    port: 80
-    targetPort: 80
-    nodePort: 30000
