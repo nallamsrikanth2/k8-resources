@@ -2,7 +2,7 @@
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
-  name: ebs-dynamic
+  name: ebs-dynamic-claim
 spec:
   storageClassName: "ebs-dynamic-sc" # Empty string must be explicitly set otherwise default StorageClass will be set
   accessModes:
@@ -28,7 +28,7 @@ spec:
   volumes:
   - name: persistent-storage
     persistentVolumeClaim:
-      claimName: ebs-static-claim
+      claimName: ebs-dynamic-claim
 
 ---
 apiVersion: v1
