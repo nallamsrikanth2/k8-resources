@@ -40,8 +40,9 @@ spec:
       project: some-project
   template:
     metadata:
-      name: nginx
-      project: some-project
+      labels:
+        name: nginx
+        project: some-project
     spec:
       containers:
       - name: nginx
