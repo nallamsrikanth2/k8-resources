@@ -59,9 +59,9 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  type: NodePort
   name: nginx
 spec:
+  type: Nodeport
   selector:
     name: nginx
     project: some-project
