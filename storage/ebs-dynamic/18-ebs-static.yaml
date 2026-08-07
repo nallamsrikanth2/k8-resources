@@ -50,10 +50,10 @@ spec:
         volumeMounts:
         - name: persistent-storage
           mountPath: /usr/share/nginx/html
-  volumes:
-  - name: persistent-storage
-    persistentVolumeClaim:
-      claimName: ebs-static-claim
+      volumes:
+      - name: persistent-storage
+        persistentVolumeClaim:
+          claimName: ebs-static-claim
 
 ---
 apiVersion: v1
