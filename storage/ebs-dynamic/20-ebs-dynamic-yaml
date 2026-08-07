@@ -1,11 +1,12 @@
+
 apiVersion: v1
 kind: PersistentVolumeClaim
 metadata:
   name: ebs-dynamic
 spec:
+  storageClassName: "ebs-dynamic-sc" # Empty string must be explicitly set otherwise default StorageClass will be set
   accessModes:
     - ReadWriteOnce
-  storageClassName: "ebs-dynamic-sc"
   resources:
     requests:
-      storage: 4Gi
+      storage: 5Gi
