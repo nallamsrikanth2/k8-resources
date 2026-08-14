@@ -16,3 +16,9 @@ spec:
   - name: nginx
     image: nginx
     imagePullPolicy: IfNotPresent
+  tolerations:
+  - key: "project"
+    operator: "Equal"
+    value: "expense"
+    effect: "NoSchedule"
+  
