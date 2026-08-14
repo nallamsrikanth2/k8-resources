@@ -11,14 +11,14 @@ spec:
           - key: project
             operator: In
             values:
-            - expense        
+            - frontend      
   containers:
   - name: nginx
     image: nginx
     imagePullPolicy: Always
-  tolerations:
-  - key: "project"
-    operator: "Equal"
-    value: "expense"
-    effect: "NoSchedule"
+  # tolerations:
+  # - key: "project"
+  #   operator: "Equal"
+  #   value: "expense"
+  #   effect: "NoSchedule"
   
