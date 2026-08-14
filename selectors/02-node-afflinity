@@ -16,9 +16,9 @@ spec:
   - name: nginx
     image: nginx
     imagePullPolicy: Always
-  # tolerations:
-  # - key: "project"
-  #   operator: "Equal"
-  #   value: "expense"
-  #   effect: "NoSchedule"
+  tolerations:
+  - key: "project"
+    operator: "Equal"
+    value: "expense"
+    effect: "NoSchedule"
   
