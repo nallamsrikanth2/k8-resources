@@ -41,10 +41,10 @@ spec:
       mountPath: /var/log/nginx/
   volumes:
   - name: nginx-logs
-  emptyDir: {}
-- name: filebeat-config
-  configMap:
-    name: filebeat
-    items:
-      - key: filebeat.yml
-        path: filebeat.yml
+    emptyDir: {}
+  - name: filebeat-config
+    configMap:
+      name: filebeat
+      items:
+        - key: filebeat.yml
+          path: filebeat.yml
